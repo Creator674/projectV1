@@ -1,0 +1,42 @@
+{
+  "plugins": ["@typescript-eslint", "import", "react-hooks"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:react-hooks/recommended", "prettier"],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prefer-spread": ["off"],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": ["builtin", "external", "object", "index", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "@/public/**",
+            "group": "sibling",
+            "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "object",
+            "position": "before"
+          }
+        ]
+      }
+    ]
+  }
+}
