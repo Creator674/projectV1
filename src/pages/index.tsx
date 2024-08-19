@@ -14,7 +14,7 @@ interface HomePageProps {
 const Home: NextPageWithLayout<HomePageProps> = ({ heading, testQuery }) => {
   return (
     <Fragment>
-      <Heading>Home page test app</Heading>
+      <Heading>Home page test app 1</Heading>
 
       <Heading>Srr data: {heading}</Heading>
 
