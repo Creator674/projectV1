@@ -7,7 +7,7 @@ export const AddIcon = createIcon({
     className: 'addIcon',
     width: '24px',
     height: '24px',
-    color: 'black'
+    color: 'black',
   },
   path: (
     <Fragment>
@@ -18,5 +18,5 @@ export const AddIcon = createIcon({
         fill='currentColor'
       />
     </Fragment>
-  )
+  ),
 });

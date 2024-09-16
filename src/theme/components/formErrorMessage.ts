@@ -10,8 +10,8 @@ export const formErrorMessageTheme = defineMultiStyleConfig({
         margin: 0,
         fontSize: { base: '12px', md: '14px', xl: '16px' },
         lineHeight: { base: '16px', md: '18px', xl: '24px' },
-        color: 'redLight'
-      }
-    }
-  }
+        color: 'redLight',
+      },
+    },
+  },
 });
