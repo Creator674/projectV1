@@ -9,15 +9,15 @@ export const headingTheme = defineStyleConfig({
       fontWeight: 'bold',
     },
     h2: {
-      fontSize: ['3xl'],
+      fontSize: { base: '3xl', lg: 'xl' },
       fontWeight: 'bold',
     },
     h3: {
-      fontSize: ['2xl'],
+      fontSize: { base: '2xl', lg: 'md' },
       fontWeight: 'normal',
     },
     h4: {
-      fontSize: ['lg'],
+      fontSize: { base: 'lg', lg: 'sm' },
       fontWeight: 'normal',
     },
   },

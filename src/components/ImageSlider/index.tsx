@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Flex, Icon, IconButton } from '@chakra-ui/react';
+import { Box, Flex, IconButton } from '@chakra-ui/react';
 import React, { FC, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Image from 'next/image';
@@ -33,12 +33,11 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
       overflow='hidden'
       {...handlers}
     >
-      {/* Buttons */}
       <IconButton
         aria-label='Previous Slide'
         onClick={prevSlide}
         position='absolute'
-        left='10px'
+        left={{ base: '12px', lg: '40px' }}
         top='50%'
         transform='translateY(-50%)'
         zIndex='1'
@@ -55,7 +54,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
         aria-label='Next Slide'
         onClick={nextSlide}
         position='absolute'
-        right='10px'
+        right={{ base: '12px', lg: '40px' }}
         top='50%'
         transform='translateY(-50%)'
         zIndex='1'
@@ -72,7 +71,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
       <Flex
         justifyContent='center'
         alignItems='center'
-        height='100%'
+        width='100%'
       >
         <Image
           src={images[currentIndex]}

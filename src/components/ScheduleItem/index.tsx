@@ -15,13 +15,15 @@ export const ScheduleItem: FC<ScheduleItemProps> = ({ title, schedule }) => (
   <Flex
     flexDirection='column'
     gap='16px'
+    width='100%'
+    justifyContent={'space-between'}
   >
     <Heading color={'neutral.0'}>{title}</Heading>
     <Flex
       background={'neutral.800'}
-      padding='16px 24px 24px'
-      minW={0}
-      w='100%'
+      padding={{ base: '16px 24px 24px', lg: '24px 32px 32px' }}
+      minWidth={0}
+      width='100%'
     >
       {schedule.map(({ day, times }, i) => (
         <Flex

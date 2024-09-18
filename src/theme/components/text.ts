@@ -5,7 +5,10 @@ export const textTheme = defineStyleConfig({
   baseStyle: {},
   sizes: {
     md: {
-      fontSize: 'md',
+      fontSize: { base: 'md', lg: 'xs' },
+    },
+    lg: {
+      fontSize: { base: 'md', lg: 'sm' },
     },
   },
 });

@@ -12,10 +12,23 @@ const TextContainer: FC<TextContainerProps> = ({ title, text }) => {
   return (
     <Flex
       gap='16px'
-      flexDirection='column'
+      flexDirection={{ base: 'column', lg: 'row' }}
+      alignItems={{ base: 'start', lg: 'flex-end' }}
+      justifyContent={{ base: 'normal', lg: 'space-between' }}
     >
-      <Heading color={'white'}>{title}</Heading>
-      <Text color={'neutral.300'}>{text}</Text>
+      <Heading
+        color={'white'}
+        width='100%'
+      >
+        {title}
+      </Heading>
+      <Text
+        color={'neutral.300'}
+        size='lg'
+        width='100%'
+      >
+        {text}
+      </Text>
     </Flex>
   );
 };
@@ -31,6 +44,7 @@ const LargeTextContainer: FC<LargeTextContainerProps> = ({ title, sub, sup }) =>
     gridTemplate='1fr 1fr / min-content 1fr'
     alignItems='center'
     justifyItems='start'
+    width='100%'
   >
     <Heading
       color={'white'}
@@ -61,10 +75,10 @@ export const InfoSection = () => (
   <SectionLayout>
     <Flex
       flexDirection='column'
-      gap='32px'
+      gap={{ base: '32px', lg: '64px' }}
     >
       <Flex
-        gap='32px'
+        gap={{ base: '32px', lg: '64px' }}
         flexDirection='column'
       >
         <TextContainer
@@ -76,7 +90,11 @@ export const InfoSection = () => (
           text={'Акредитованный зал бокса в центре Минска по доступным ценам'}
         />
       </Flex>
-      <Flex flexDirection='column'>
+      <Flex
+        flexDirection={{ base: 'column', lg: 'row' }}
+        justifyContent={{ base: 'normal', lg: 'space-between' }}
+        gap={{ base: '24px', lg: 0 }}
+      >
         <LargeTextContainer
           title={'10'}
           sub={'Лет обучаем'}

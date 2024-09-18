@@ -10,8 +10,9 @@ export const StaffSection: FC = () => {
   return (
     <SectionLayout>
       <Flex
-        flexDirection='column'
-        gap='48px'
+        flexDirection={{ base: 'column', lg: 'row' }}
+        gap={{ base: '48px', lg: '40px' }}
+        justifyContent='space-between'
       >
         <StaffCard
           image={staffImage}

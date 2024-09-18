@@ -30,6 +30,7 @@ export const StaffCard: FC<StaffCardProps> = ({ image, name, description }) => (
     >
       <Heading
         color='primary.300'
+        variant='h2'
         fontWeight='400'
       >
         {name}

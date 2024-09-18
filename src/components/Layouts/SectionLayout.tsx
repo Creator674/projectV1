@@ -9,7 +9,7 @@ export const SectionLayout: FC<SectionLayoutProps> = ({ children }) => {
   return (
     <Box
       bgColor={'black'}
-      p={'96px 16px'}
+      padding={{ base: '96px 16px', lg: '200px 60px' }}
     >
       {children}
     </Box>

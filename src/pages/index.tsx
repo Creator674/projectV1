@@ -23,24 +23,7 @@ const Home: NextPageWithLayout<HomePageProps> = ({ heading, testQuery }) => {
       <StaffSection />
       <ScheduleSection />
       <PhotoSliderSection />
-      <FaqSection
-        title='Частые вопросы'
-        accordionItems={[
-          { title: 'Можно поменять тренера?', content: 'Да, вы можете выбрать подходящего под себя тренера.' },
-          {
-            title: 'Можно ходить к разным тренерам одновременно?',
-            content: 'Да, вы можете выбрать подходящего под себя тренера.',
-          },
-          {
-            title: 'Если не получается придти по расписанию своей группы, можно придти в другую? ',
-            content: 'Да, вы можете выбрать подходящего под себя тренера.',
-          },
-          {
-            title: 'Если у меня график 2/2, 3/2, 4/2, можно ходить в разные дни к одному тренеру?',
-            content: 'Да, вы можете выбрать подходящего под себя тренера.',
-          },
-        ]}
-      />
+      <FaqSection />
       {testQuery && <Heading>Query?: {testQuery}</Heading>}
     </Box>
   );
