@@ -20,16 +20,16 @@ export const selectTheme = defineMultiStyleConfig({
         backgroundColor: 'white',
         _placeholder: {
           color: 'grayLight3',
-          opacity: 0.8
+          opacity: 0.8,
         },
         _focus: {},
         _invalid: {
           borderColor: 'redLight',
           _placeholder: {
-            color: 'redLight'
-          }
-        }
-      }
-    }
-  }
+            color: 'redLight',
+          },
+        },
+      },
+    },
+  },
 });

@@ -4,7 +4,7 @@ export const inputTheme = defineStyleConfig({
   defaultProps: { size: '' },
   baseStyle: {
     height: 'unset',
-    fontWeight: { base: 400, md: 500 }
+    fontWeight: { base: 400, md: 500 },
   },
   variants: {
     objectCreate: {
@@ -20,22 +20,22 @@ export const inputTheme = defineStyleConfig({
         backgroundColor: 'blackMedium',
         _placeholder: {
           color: 'grayLight3',
-          opacity: 0.8
+          opacity: 0.8,
         },
         _focus: {},
         _invalid: {
           borderColor: 'redLight',
           _placeholder: {
-            color: 'redLight'
-          }
+            color: 'redLight',
+          },
         },
         '&::-webkit-calendar-picker-indicator': {
-          filter: 'invert(1)'
+          filter: 'invert(1)',
         },
         '&::-webkit-calendar-picker-indicator:hover': {
-          cursor: 'pointer'
-        }
-      }
+          cursor: 'pointer',
+        },
+      },
     },
     searchInput: {
       field: {
@@ -51,16 +51,16 @@ export const inputTheme = defineStyleConfig({
         borderRadius: '10px',
         background: 'white',
         _invalid: {
-          borderColor: 'redLight'
-        }
-      }
+          borderColor: 'redLight',
+        },
+      },
     },
     hidden: {
       field: {
         width: '0px',
         height: '0px',
-        display: 'none'
-      }
-    }
-  }
+        display: 'none',
+      },
+    },
+  },
 });

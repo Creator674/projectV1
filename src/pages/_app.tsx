@@ -1,12 +1,10 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import NextNProgress from 'nextjs-progressbar';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
 
 import { customTheme } from '@/theme';
-import { PROGRESSBAR_CONFIG } from '@/constants';
 import { Fonts } from '@/components/Common';
 
 //According to a documentation the line looks like this:
@@ -24,14 +22,18 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <ChakraProvider resetCSS theme={customTheme}>
+    <ChakraProvider
+      resetCSS
+      theme={customTheme}
+    >
       <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, maximum-scale=1'
+        />
       </Head>
 
       <Fonts />
-
-      <NextNProgress {...PROGRESSBAR_CONFIG} />
 
       {getLayout(<Component {...pageProps} />)}
     </ChakraProvider>

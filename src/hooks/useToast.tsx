@@ -16,7 +16,7 @@ export const useToast = (): ToastResultProps => {
       status: type,
       title: message,
       isClosable: true,
-      position: 'top-right'
+      position: 'top-right',
     });
   };
 
@@ -29,7 +29,7 @@ export const useToast = (): ToastResultProps => {
       title: typeof error === 'string' ? error : errorMessage,
       status: ToastType.Error,
       isClosable: true,
-      position: 'top-right'
+      position: 'top-right',
     });
   };
 

@@ -5,32 +5,32 @@ const { defineMultiStyleConfig } = createMultiStyleConfigHelpers(alertAnatomy.ke
 
 export const alertTheme = defineMultiStyleConfig({
   baseStyle: {
-    container: {}
+    container: {},
   },
   variants: {
     success: {
       container: {
         color: 'black',
-        bg: 'greenLight'
-      }
+        bg: 'greenLight',
+      },
     },
     error: {
       container: {
         color: 'black',
-        bg: 'redLight'
-      }
+        bg: 'redLight',
+      },
     },
     info: {
       container: {
         color: 'white',
-        bg: 'blue'
-      }
+        bg: 'blue',
+      },
     },
     warning: {
       container: {
         color: 'white',
-        bg: 'yellow'
-      }
-    }
-  }
+        bg: 'yellow',
+      },
+    },
+  },
 });
