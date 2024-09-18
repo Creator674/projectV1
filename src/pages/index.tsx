@@ -3,10 +3,9 @@ import { Box, Heading } from '@chakra-ui/react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 
 import { DefaultPageLayout } from '@/components/Layouts';
-import { InfoSection, PhotoSliderSection } from '@/Sections';
-import { StaffSection } from '@/Sections';
-import { ScheduleSection } from '@/Sections/Schedule';
-import { FaqSection } from '@/Sections/Faq';
+import { InfoSection, PhotoSliderSection, ScheduleSection } from '@/sections';
+import { StaffSection } from '@/sections';
+import { FaqSection } from '@/sections/Faq';
 
 import { NextPageWithLayout } from './_app';
 
