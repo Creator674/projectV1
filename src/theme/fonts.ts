@@ -14,5 +14,6 @@ const prompt = Prompt({
 
 export const fonts = {
   heading: `${oswald.style.fontFamily}, sans-serif`,
+  button: `${oswald.style.fontFamily}, sans-serif`,
   body: `${prompt.style.fontFamily}, sans-serif`,
 };

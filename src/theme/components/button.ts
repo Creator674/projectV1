@@ -1,25 +1,27 @@
 import { defineStyleConfig } from '@chakra-ui/react';
 
+import { fonts } from '../fonts';
+
 export const buttonTheme = defineStyleConfig({
+  defaultProps: { variant: 'submit' },
   baseStyle: {},
   variants: {
     submit: {
+      minWidth: '20px',
       width: '100%',
+      height: '44px',
       fontSize: {
-        base: '16px',
-      },
-      lineHeight: {
         base: '18px',
       },
-      padding: {
-        base: '4px 8px',
-      },
-      letterSpacing: '0.03em',
-      color: 'black',
-      justifyContent: 'space-between',
-      borderColor: 'black',
-      borderRadius: '2px',
-      backgroundColor: 'grayLight',
+      fontWeight: 500,
+      fontFamily: fonts.button,
+      color: 'neutral.0',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 0,
+      border: 'none',
+      borderRadius: '5px',
+      backgroundColor: 'primary.300',
     },
   },
 });

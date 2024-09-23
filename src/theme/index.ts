@@ -17,6 +17,7 @@ import {
 import { headingTheme } from './components/heading';
 import { textTheme } from './components/text';
 import { lineHeights } from './lineHeights';
+import { linkTheme } from './components/link';
 
 export const customTheme = extendTheme({
   breakpoints,
@@ -33,6 +34,7 @@ export const customTheme = extendTheme({
     FormError: formErrorMessageTheme,
     Alert: alertTheme,
     Select: selectTheme,
+    Link: linkTheme,
   },
   styles: global,
 });

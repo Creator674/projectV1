@@ -3,7 +3,8 @@ import { Box, Heading } from '@chakra-ui/react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 
 import { DefaultPageLayout } from '@/components/Layouts';
-import { InfoSection, PhotoSliderSection, ScheduleSection, StaffSection, FaqSection } from '@/sections';
+import { InfoSection, PhotoSliderSection, ScheduleSection, StaffSection, FaqSection, FooterSection } from '@/sections';
+import { PricesSection } from '@/sections/Prices';
 
 import { NextPageWithLayout } from './_app';
 
@@ -12,16 +13,16 @@ interface HomePageProps {
   testQuery?: string | string[];
 }
 
-const Home: NextPageWithLayout<HomePageProps> = ({ heading, testQuery }) => {
+const Home: NextPageWithLayout<HomePageProps> = () => {
   return (
     <Box minW='360px'>
-      <Heading variant='h2'>Srr data: {heading}</Heading>
       <InfoSection />
       <StaffSection />
+      <PricesSection />
       <ScheduleSection />
       <PhotoSliderSection />
       <FaqSection />
-      {testQuery && <Heading>Query?: {testQuery}</Heading>}
+      <FooterSection />
     </Box>
   );
 };

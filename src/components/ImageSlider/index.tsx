@@ -34,6 +34,8 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
       {...handlers}
     >
       <IconButton
+        width='32px'
+        height='32px'
         aria-label='Previous Slide'
         onClick={prevSlide}
         position='absolute'
@@ -51,6 +53,8 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
         />
       </IconButton>
       <IconButton
+        width='32px'
+        height='32px'
         aria-label='Next Slide'
         onClick={nextSlide}
         position='absolute'
@@ -71,6 +75,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
       <Flex
         justifyContent='center'
         alignItems='center'
+        maxHeight='100vh'
         width='100%'
       >
         <Image
