@@ -25,6 +25,7 @@ const ScheduleItems = [
 export const ScheduleSection = () => (
   <SectionLayout>
     <Flex
+      id='schedule'
       flexDirection={{ base: 'column', lg: 'row' }}
       gap={{ base: '32px', lg: '20px' }}
     >

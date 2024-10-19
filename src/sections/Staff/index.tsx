@@ -10,6 +10,7 @@ export const StaffSection: FC = () => {
   return (
     <SectionLayout>
       <Flex
+        id='staff'
         flexDirection={{ base: 'column', lg: 'row' }}
         gap={{ base: '48px', lg: '40px' }}
         justifyContent='space-between'

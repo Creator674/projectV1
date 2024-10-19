@@ -7,6 +7,7 @@ import { InfoSection, PhotoSliderSection, ScheduleSection, StaffSection, FaqSect
 import { PricesSection } from '@/sections/Prices';
 
 import { NextPageWithLayout } from './_app';
+import { IntroSection } from '@/sections/Intro';
 
 interface HomePageProps {
   heading: string;
@@ -15,7 +16,11 @@ interface HomePageProps {
 
 const Home: NextPageWithLayout<HomePageProps> = () => {
   return (
-    <Box minW='360px'>
+    <Box
+      minW='360px'
+      width='100%'
+    >
+      <IntroSection />
       <InfoSection />
       <StaffSection />
       <PricesSection />

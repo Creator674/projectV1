@@ -1,5 +1,6 @@
-import { Button, Flex, Heading, Text } from '@chakra-ui/react';
+import { Button, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react';
 import React, { FC } from 'react';
+
 interface PriceCardProps {
   title: string;
   description: string[];
@@ -9,6 +10,8 @@ interface PriceCardProps {
 
 export const PriceCard: FC<PriceCardProps> = ({ title, description, isFreeTryoutAvailable, price }) => {
   const [firstTitleWord, ...titleRest] = title.split(' ');
+  const [isDesktop] = useMediaQuery('(min-width: 1024px)');
+
   return (
     <Flex
       flexDirection='column'
@@ -86,16 +89,18 @@ export const PriceCard: FC<PriceCardProps> = ({ title, description, isFreeTryout
           {price}
         </Heading>
       </Flex>
-      <Button
-        as='a'
-        href='#footer'
-        scrollMarginTop='-200px'
-        flexBasis='44px'
-        opacity='0'
-        _groupHover={{ opacity: '1' }}
-      >
-        Записаться
-      </Button>
+      {isDesktop && (
+        <Button
+          as='a'
+          href='#footer'
+          flexBasis='44px'
+          opacity='0'
+          variant='submit'
+          _groupHover={{ opacity: '1' }}
+        >
+          Записаться
+        </Button>
+      )}
     </Flex>
   );
 };

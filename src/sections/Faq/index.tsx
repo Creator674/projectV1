@@ -12,7 +12,10 @@ export const FaqSection: FC = () => {
   const [isDesktop] = useMediaQuery('(min-width: 1024px)');
   return (
     <SectionLayout>
-      <Flex gap='80px'>
+      <Flex
+        id='faq'
+        gap='80px'
+      >
         <Flex
           flexDirection='column'
           width='100%'
