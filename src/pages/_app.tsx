@@ -5,7 +5,6 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
 
 import { customTheme } from '@/theme';
-import { Fonts } from '@/components/Common';
 
 //According to a documentation the line looks like this:
 //export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -32,8 +31,6 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           content='width=device-width, initial-scale=1, maximum-scale=1'
         />
       </Head>
-
-      <Fonts />
 
       {getLayout(<Component {...pageProps} />)}
     </ChakraProvider>
