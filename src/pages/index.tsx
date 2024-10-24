@@ -8,6 +8,7 @@ import { PricesSection } from '@/sections/Prices';
 
 import { NextPageWithLayout } from './_app';
 import { IntroSection } from '@/sections/Intro';
+import { PreviewSection } from '@/sections/Preview';
 
 interface HomePageProps {
   heading: string;
@@ -21,6 +22,7 @@ const Home: NextPageWithLayout<HomePageProps> = () => {
       width='100%'
     >
       <IntroSection />
+      <PreviewSection />
       <InfoSection />
       <StaffSection />
       <PricesSection />

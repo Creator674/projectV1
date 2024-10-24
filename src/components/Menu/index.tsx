@@ -50,7 +50,7 @@ export const Menu: FC<MenuProps> = ({ navLinks }) => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton color='neutral.0' />
           <DrawerHeader
             bgColor='neutral.black'
             color='neutral.0'
