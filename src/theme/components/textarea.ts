@@ -4,7 +4,7 @@ export const textAreaTheme = defineStyleConfig({
   defaultProps: { size: '' },
   baseStyle: {
     height: 'unset',
-    fontWeight: { base: 400, md: 500 }
+    fontWeight: { base: 400, md: 500 },
   },
   variants: {
     objectCreate: {
@@ -20,15 +20,15 @@ export const textAreaTheme = defineStyleConfig({
       backgroundColor: 'blackMedium',
       _placeholder: {
         color: 'grayLight3',
-        opacity: 0.8
+        opacity: 0.8,
       },
       _focus: {},
       _invalid: {
         borderColor: 'redLight',
         _placeholder: {
-          color: 'redLight'
-        }
-      }
-    }
-  }
+          color: 'redLight',
+        },
+      },
+    },
+  },
 });

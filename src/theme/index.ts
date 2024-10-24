@@ -2,32 +2,39 @@ import { extendTheme } from '@chakra-ui/react';
 
 import { breakpoints } from '@/theme/breakpoints';
 import { global } from '@/theme/global';
-import { SEMANTIC_COLORS as colors } from '@/theme/colors';
+import { colors } from '@/theme/colors';
+import { fontSizes } from '@/theme/fontSizes';
+import { fonts } from '@/theme/fonts';
 import {
   buttonTheme,
   textAreaTheme,
   inputTheme,
   formErrorMessageTheme,
   alertTheme,
-  selectTheme
+  selectTheme,
 } from '@/theme/components';
+
+import { headingTheme } from './components/heading';
+import { textTheme } from './components/text';
+import { lineHeights } from './lineHeights';
+import { linkTheme } from './components/link';
 
 export const customTheme = extendTheme({
   breakpoints,
   colors,
-  fontSizes: {},
-  fonts: {
-    OldStandartRegular: 'Old Standart Regular TT, sans-serif',
-    OldStandartItalic: 'Old Standart Italic TT, sans-serif',
-    OldStandartBold: 'Old Standart Bold TT, sans-serif',
-  },
+  fontSizes,
+  lineHeights,
+  fonts,
   components: {
     Button: buttonTheme,
+    Heading: headingTheme,
+    Text: textTheme,
     Textarea: textAreaTheme,
     Input: inputTheme,
     FormError: formErrorMessageTheme,
     Alert: alertTheme,
-    Select: selectTheme
+    Select: selectTheme,
+    Link: linkTheme,
   },
-  styles: global
+  styles: global,
 });

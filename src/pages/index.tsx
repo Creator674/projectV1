@@ -1,25 +1,36 @@
-import { Fragment, ReactElement } from 'react';
-import { Heading } from '@chakra-ui/react';
+import { ReactElement } from 'react';
+import { Box, Heading } from '@chakra-ui/react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 
 import { DefaultPageLayout } from '@/components/Layouts';
+import { InfoSection, PhotoSliderSection, ScheduleSection, StaffSection, FaqSection, FooterSection } from '@/sections';
+import { PricesSection } from '@/sections/Prices';
 
 import { NextPageWithLayout } from './_app';
+import { IntroSection } from '@/sections/Intro';
+import { PreviewSection } from '@/sections/Preview';
 
 interface HomePageProps {
   heading: string;
   testQuery?: string | string[];
 }
 
-const Home: NextPageWithLayout<HomePageProps> = ({ heading, testQuery }) => {
+const Home: NextPageWithLayout<HomePageProps> = () => {
   return (
-    <Fragment>
-      <Heading>Home page test app 1</Heading>
-
-      <Heading>Srr data: {heading}</Heading>
-
-      {testQuery && <Heading>Query?: {testQuery}</Heading>}
-    </Fragment>
+    <Box
+      minW='360px'
+      width='100%'
+    >
+      <IntroSection />
+      <PreviewSection />
+      <InfoSection />
+      <StaffSection />
+      <PricesSection />
+      <ScheduleSection />
+      <PhotoSliderSection />
+      <FaqSection />
+      <FooterSection />
+    </Box>
   );
 };
 
@@ -37,8 +48,8 @@ export async function getServerSideProps(
   const populatedWithPositionsProps: { props: HomePageProps } = {
     props: {
       heading: 'data from server',
-      testQuery: test
-    }
+      testQuery: test || 'query',
+    },
   };
 
   return { ...populatedWithPositionsProps };
